@@ -1,14 +1,17 @@
-package com.example.rmarket_jetpack_compse
+package com.example.jetpack_compose_example
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
@@ -30,20 +33,24 @@ class MainActivity : ComponentActivity() {
             JetpackcomposeexampleTheme {
                 // A surface container using the 'background' color from the theme
                 Surface {
-                    Column(
-                        modifier = Modifier
-                            //여러가지 속성들을 메소드 체인으로 변경 가능
-                            //순서가 차례대로 적용되므로 참고할것
-                            .fillMaxSize()
-                            .background(color = Color.Blue)
-                            .padding(16.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.SpaceBetween
+                    Box(
+                        modifier = Modifier.background(color = Color.Green)
+                            .fillMaxWidth()
+                            .height(200.dp),
+
                     ) {
-                        Text("text")
-                        Text("World")
-                        Text("RMarket")
+                        Text("Hello")
+                        Box(
+                            modifier = Modifier.fillMaxSize()
+                                .padding(16.dp),
+
+                            contentAlignment = Alignment.BottomEnd,
+                        ){
+                            Text("123412~~~~~~!!!")
+                        }
+
                     }
+
                 }
             }
         }
